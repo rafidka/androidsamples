@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity">
+
+  <Button
+    android:id="@+id/createNotification"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Create Notification Instantly"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignEnd="@+id/textView4"/>
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:text="Title"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+  <EditText
+    android:id="@+id/titleEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/textView"
+    android:hint="Enter the title of the notification here..."
+    android:text="Test Title"
+    />
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/titleEditText"
+    android:text="Content"
+    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+  <EditText
+    android:id="@+id/contentEditText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/textView2"
+    android:ems="10"
+    android:hint="Enter the content of the notification here..."
+    android:text="This is a test content."
+    android:inputType="textMultiLine"/>
+
+  <RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/textView4"
+    android:layout_alignParentStart="true"
+    android:id="@+id/radioGroup">
+
+    <RadioButton
+      android:id="@+id/onceRadioButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/repeatingRadioButton"
+      android:layout_alignEnd="@+id/repeatingRadioButton"
+      android:layout_alignParentStart="true"
+      android:text="Once"
+      android:checked="true"
+      android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <RadioButton
+      android:id="@+id/repeatingRadioButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/createNotification"
+      android:layout_alignParentStart="true"
+      android:text="Repeating every "
+      android:textAppearance="?android:attr/textAppearanceLarge"/>
+  </RadioGroup>
+
+  <TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="seconds"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_above="@+id/createNotification"
+    android:layout_alignParentEnd="true"/>
+
+  <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:ems="10"
+    android:id="@+id/periodEditText"
+    android:layout_alignBottom="@+id/radioGroup"
+    android:layout_toLeftOf="@+id/textView4"
+    android:layout_toEndOf="@+id/radioGroup"
+    android:text="30"
+    android:enabled="false"/>
+
+</RelativeLayout>
