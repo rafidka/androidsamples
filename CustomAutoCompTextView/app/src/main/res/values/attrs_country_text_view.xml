@@ -1,0 +1,6 @@
+<resources>
+  <!-- Hint: This defines a new XML element type called CountryTextView through which we
+       we can use our custom view. -->
+  <declare-styleable name="CountryTextView">
+  </declare-styleable>
+</resources>
