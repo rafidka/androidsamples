@@ -1,0 +1,17 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+  android:fillBefore="true"
+  android:interpolator="@android:anim/linear_interpolator">
+  <!-- Hint: This animation transformation is used to scale the view out.
+       Notice that unlike scale_in.xml, the "startOffset" is not used here,
+       since we have to start by scaling the visible view out first, then
+       we scale in the invisible view. -->
+  <scale
+    android:duration="400"
+    android:fillBefore="false"
+    android:fromXScale="1.0"
+    android:fromYScale="1.0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toXScale="0.0"
+    android:toYScale="1.0" />
+</set>
